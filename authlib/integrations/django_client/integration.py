@@ -26,17 +26,13 @@ class DjangoIntegration(FrameworkIntegration):
         if request_token_url:
             return request.GET.dict()
 
-        if request.method == 'GET':
-            params = {
+        return {
                 'code': request.GET.get('code'),
                 'state': request.GET.get('state'),
-            }
-        else:
-            params = {
+            } if request.method == 'GET' else {
                 'code': request.POST.get('code'),
                 'state': request.POST.get('state'),
             }
-        return params
 
     @staticmethod
     def load_config(oauth, name, params):
