@@ -3,7 +3,7 @@
 
 
 from setuptools import setup, find_packages
-from authlib.consts import name, version, homepage, author
+from authlib.consts import name, homepage, author
 
 
 with open('README.rst') as f:
