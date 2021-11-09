@@ -3,7 +3,7 @@
 
 
 from setuptools import setup, find_packages
-from authlib.consts import name, version, homepage, author
+from authlib.consts import name, homepage, author
 
 
 with open('README.rst') as f:
@@ -16,7 +16,6 @@ crypto_requires = ['cryptography']
 
 setup(
     name=name,
-    version=version,
     author=author,
     author_email='tech@quartic.ai',
     url=homepage,
