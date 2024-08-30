@@ -15,6 +15,6 @@ containerNodes = [
 ]
 
 pipelineBuilder = new PipelineBuilder(this, env, scm, containerNodes)
-userEnv = ['RESERVE=azubuntu,'MAKE_OBFUSCATE=true','OBFUSCATE_DIR=../authlib-obfuscated']
+userEnv = ['RESERVE=azubuntu','MAKE_OBFUSCATE=true','OBFUSCATE_DIR=../authlib-obfuscated']
 
 pipelineBuilder.executePipeline(userEnv)
